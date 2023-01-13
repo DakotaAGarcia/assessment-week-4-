@@ -1,4 +1,5 @@
 const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
+let globalId = 0
 module.exports = {
 
     getCompliment: (req, res) => {

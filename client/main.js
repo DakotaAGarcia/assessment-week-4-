@@ -69,15 +69,35 @@ const addInspiration= () =>{
         console.log(error);
     })
 };
-const deleteQuote = () =>
-deleteBtn.disabled = true;
-axios.delete("http://localhost:4000/api/delete")
-.then(res =>{
-    const data = res.data
-    alert(data)
+// const deleteQuote = () =>
+// deleteBtn.disabled = true;
+// const quotesList = document.getElementById("quotes-list");
+// const lastQuote = quotesList.lastChild;
+// quotesList.removeChild(lastQuote);
+
+// axios.delete("http://localhost:4000/api/delete")
+// .then(res =>{
+//     const data = res.data
+//     alert(data)
     
-deleteBtn.disabled = false;
-})
+// deleteBtn.disabled = false;
+// })
+const deleteQuote = () => {
+    deleteBtn.disabled = true;
+    axios.delete("http://localhost:4000/api/delete")
+      .then(res => {
+        const data = res.data;
+        alert(data);
+        const quotesList = document.getElementById("quotes-list");
+        const lastQuote = quotesList.lastChild;
+        quotesList.removeChild(lastQuote);
+        deleteBtn.disabled = false;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  
 
 
 deleteBtn.addEventListener('click', deleteQuote)
