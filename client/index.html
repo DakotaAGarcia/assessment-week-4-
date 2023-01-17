@@ -4,6 +4,13 @@
     <title>Back End Assessment</title>
     <link rel="stylesheet" href="styles.css">
   </head>
+  <nav>
+    <ul class="header">
+          <li id="home" class="header-item"><a href="./index.html">Home</a></li>
+          <li id="profile" class="header-item"><a href="./profile.html">Profile</a></li>
+          <li id="about" class="header-item"><a href="./about.html">About</a></li>
+      </ul>
+  </nav>
   <body class="container">
     <form>
     <button id="complimentButton">Get a compliment</button>
@@ -16,11 +23,13 @@
       id = "newComp"
       placeholder="Spread some joy"/>
       <button id="add">Add Compliment</button>
+      <p>Share an inspirational quote:</p>
       <input
       type = "textarea"
-      id="quote"/>
+      id="quote"
+      placeholder="Being happy is the greatest from of success"/>
       <ul id="quotes-list"></ul>
-      <button id="inspire">Share an inspirational quote</button>
+      <button id="inspire">Share</button>
       <button id="delete">Delete Quote</button>
 
 
